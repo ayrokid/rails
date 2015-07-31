@@ -1,0 +1,26 @@
+<h4>Daftar Tulisan</h4>
+<% if admin? %>
+<%= link_to new_post_url, class: 'btn btn-success btn-sm' do %>
+	<i class="glyphicon glyphicon-plus"></i> Tulis Baru
+<% end %>
+<br>
+<% end %>
+<%= will_paginate %>
+
+<ul class="posts">
+	<% @posts.each do | post| %>
+		<h5>
+			<div class="title"><%= link_to post.title, post %></div>
+			<em><small><%= l(post.created_at, :format => :long) %></small></em>
+		</h5>
+		<div class="body">
+			<%= post.body %>
+		</div>
+		<%= link_to 'Edit', edit_post_path(post), class: 'btn btn-info btn-xs' %> | 
+		<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn btn-danger btn-xs' %>
+		<hr>
+
+	<% end %>
+</ul>
+
+<%= will_paginate %>
