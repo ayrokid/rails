@@ -1,0 +1,21 @@
+<!-- app/views/layouts/application.html.erb -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blogku</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= render 'shared/navigation' %>
+
+	<div class="container">
+		<div class="content">
+			<%= yield %>
+		</div>
+	</div>
+</body>
+</html>
