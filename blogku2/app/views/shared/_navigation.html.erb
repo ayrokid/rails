@@ -1,0 +1,48 @@
+<!-- app/views/shared/_navigation.html.erb -->
+
+<<<<<<< HEAD
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <%= link_to "TauBlog", root_url, class: "navbar-brand" %>
+    </div>
+  </div>
+</nav>
+=======
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+      	<img src="" alt="Brand">
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>
+        	<%= link_to 'Home', root_url %>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      	<% if !admin? %>
+        <li>
+        	<%= link_to 'Admin', signin_url %>
+        </li>
+        <% else %>
+        <li>
+        	<%= link_to 'Logout', signout_url, method: 'delete' %>
+        </li>
+        <% end %>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+>>>>>>> 38396a90dc3d58d5a9776e8678d948406393b43a

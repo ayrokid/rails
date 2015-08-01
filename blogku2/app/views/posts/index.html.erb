@@ -1,0 +1,56 @@
+<h4>Daftar Tulisan</h4>
+<<<<<<< HEAD
+
+<%= link_to "Tulisa Artikel", new_post_url %>
+
+<nav>
+<%= will_paginate %>
+</nav>
+<ul class="posts">
+	<% @posts.each do |post| %>
+	<h5>
+		<div class="title">
+			<%= link_to post.title, post %>
+		</div>
+		<em>
+			<small>
+				<%= post.created_at.to_formatted_s(:long) %>
+			</small>
+		</em>
+	</h5>
+
+	<div class="body">
+		<%= post.body %>
+	</div>
+	<% end %>
+</ul>
+<nav>
+<%= will_paginate %>
+</nav>
+=======
+<% if admin? %>
+<%= link_to new_post_url, class: 'btn btn-success btn-sm' do %>
+	<i class="glyphicon glyphicon-plus"></i> Tulis Baru
+<% end %>
+<br>
+<% end %>
+<%= will_paginate %>
+
+<ul class="posts">
+	<% @posts.each do | post| %>
+		<h5>
+			<div class="title"><%= link_to post.title, post %></div>
+			<em><small><%= l(post.created_at, :format => :long) %></small></em>
+		</h5>
+		<div class="body">
+			<%= post.body %>
+		</div>
+		<%= link_to 'Edit', edit_post_path(post), class: 'btn btn-info btn-xs' %> | 
+		<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn btn-danger btn-xs' %>
+		<hr>
+
+	<% end %>
+</ul>
+
+<%= will_paginate %>
+>>>>>>> 38396a90dc3d58d5a9776e8678d948406393b43a
