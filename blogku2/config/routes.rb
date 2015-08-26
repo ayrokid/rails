@@ -9,8 +9,4 @@ Rails.application.routes.draw do
 
   match 'signin', to: 'sessions#new', via: 'get'
   match 'signout', to: 'sessions#destroy', via: 'delete'
-<<<<<<< HEAD
-
-=======
->>>>>>> 38396a90dc3d58d5a9776e8678d948406393b43a
 end

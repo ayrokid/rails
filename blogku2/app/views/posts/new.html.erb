@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-<%= form_for :post, url: posts_path do |f| %>
-	<p>
-		<%= f.label :judul %><br />
-		<%= f.text_field :title %>
-	</p>
-
-	<p>
-		<%= f.label :isi %><br>
-		<%= f.text_area :body %>
-	</p>
-
-	<%= f.submit %>
-=======
 <%= form_for :post, class: 'form', url: posts_path do |f| %>
 	<div class="form-group">
 		<%= f.label :Judul %>
@@ -22,5 +8,4 @@
 		<%= f.text_area :body, class: 'form-control' %>
 	</div>
 	<%= f.submit :Simpan, class: 'btn btn-success' %>
->>>>>>> 38396a90dc3d58d5a9776e8678d948406393b43a
 <% end %>

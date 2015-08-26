@@ -1,6 +1,4 @@
 module SessionsHelper
-<<<<<<< HEAD
-=======
 
 	def sign_in(admin)
 		remember_token = Admin.new_remember_token
@@ -38,5 +36,5 @@ module SessionsHelper
 	def store_location
 		session[:return_to] = request.url if request.get?
 	end
->>>>>>> 38396a90dc3d58d5a9776e8678d948406393b43a
+
 end

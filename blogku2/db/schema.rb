@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150523042808) do
-=======
-ActiveRecord::Schema.define(version: 20150519062506) do
->>>>>>> 38396a90dc3d58d5a9776e8678d948406393b43a
 
   create_table "admins", force: :cascade do |t|
     t.string   "name",            limit: 255
@@ -23,16 +19,11 @@ ActiveRecord::Schema.define(version: 20150519062506) do
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
     t.string   "password_digest", limit: 255
-<<<<<<< HEAD
-  end
-
-=======
     t.string   "remember_token",  limit: 255
   end
 
   add_index "admins", ["remember_token"], name: "index_admins_on_remember_token", using: :btree
 
->>>>>>> 38396a90dc3d58d5a9776e8678d948406393b43a
   create_table "comments", force: :cascade do |t|
     t.string   "author",     limit: 255
     t.string   "body",       limit: 255
